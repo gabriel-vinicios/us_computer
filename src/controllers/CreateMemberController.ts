@@ -14,6 +14,6 @@ export class CreateMemberController {
             }
         })
 
-        return response.json()
+        return response.json(member)
     }
 }

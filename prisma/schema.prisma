@@ -18,4 +18,22 @@ model Members {
   description String
 
   @@map("members")
+  DepartmentMembers     DepartmentMembers[]
+}
+
+model Department {
+  id    String    @id   @default(uuid())
+  name  String
+
+  @@map("departments")
+  DepartmentMembers     DepartmentMembers[]
+}
+
+model DepartmentMembers {
+  id              String     @id   @default(uuid())
+  id_members      String
+  members         Members    @relation(fields: [id_members], references: [id])
+  id_departments  String
+  departments     Department @relation(fields: [id_departments], references: [id])
+  @@map("departments_members")
 }
