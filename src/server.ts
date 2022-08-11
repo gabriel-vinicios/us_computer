@@ -1,13 +1,14 @@
 import express from "express"
 import { router } from "./routes"
 import logger from './logger'
-
+import cors from 'cors'
 
 const app = express()
 const PORT = 4003
 
 app.use(express.json())
 app.use(router)
+app.use(cors())
 
 try{
 

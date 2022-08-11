@@ -1,7 +1,7 @@
 
 import { Request, Response } from "express";
-import { prismaClient } from "../database/prismaClient";
-import logger from "../logger";
+import { prismaClient } from "../../database/prismaClient";
+import logger from "../../logger";
 
 export class CreateDepartmentController {
     async handle(request: Request, response: Response){
