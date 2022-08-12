@@ -1,10 +1,10 @@
 import { Router } from 'express'
-import { CreateDepartmentController } from './controllers/Create/CreateDepartmentController'
-import { CreateDepartmentMembersController } from './controllers/Create/CreateDepartmentMembersController'
-import { CreateMemberController } from './controllers/Create/CreateMemberController'
-import { CreateMemberWithExistDepartment } from './controllers/Create/CreateMemberWithExistDepartment'
-import { FindDepartmentController } from './controllers/Find/FindDepartmentController'
-import { FindMemberController } from './controllers/Find/FindMemberController'
+import { CreateDepartmentController } from './controllers/Entities/Department/CreateDepartmentController'
+import { CreateDepartmentMembersController } from './controllers/Entities/DepartmentMembers/CreateDepartmentMembersController'
+import { CreateMemberController } from './controllers/Entities/Members/CreateMemberController'
+import { CreateMemberWithExistDepartment } from './controllers/Entities/Members/CreateMemberWithExistDepartment'
+import { FindDepartmentController } from './controllers/Entities/Department/FindDepartmentController'
+import { FindMemberController } from './controllers/Entities/Members/FindMemberController'
 
 const router = Router()
 

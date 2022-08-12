@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { prismaClient } from "../../database/prismaClient";
-import logger from "../../logger";
+import { prismaClient } from "../../../database/prismaClient";
+import logger from "../../../logger";
 
 export class FindMemberController {
     async handle(request: Request, response: Response) {
