@@ -31,9 +31,9 @@ model Department {
 
 model DepartmentMembers {
   id              String     @id   @default(uuid())
-  id_members      String
-  members         Members    @relation(fields: [id_members], references: [id])
-  id_departments  String
-  departments     Department @relation(fields: [id_departments], references: [id])
+  id_members      String?
+  members         Members?    @relation(fields: [id_members], references: [id])
+  id_departments  String?
+  departments     Department? @relation(fields: [id_departments], references: [id])
   @@map("departments_members")
 }
