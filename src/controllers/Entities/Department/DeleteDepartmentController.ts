@@ -20,7 +20,7 @@ export class DeleteDepartmentController {
                 id
             }
         })
-
+        logger.info(`this department was deleted: ${department.name}`)
         return response.json(department)
     } catch(err) {
         logger.error(`internal server error on DeleteDepartmentController.ts was found:\n\n ${err}`)

@@ -15,13 +15,13 @@ export class DeleteMemberController {
 
             }
 
-            const department = await prismaClient.members.delete({
+            const member = await prismaClient.members.delete({
                 where: {
                     id
                 }
             })
-
-            return response.json(department)
+            logger.info(`this member was deleted: ${member.name}`)
+            return response.json(member)
         } catch (err) {
             logger.error(`internal server error on DeleteMemberController.ts was found:\n\n ${err}`)
         }
