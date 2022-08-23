@@ -23,8 +23,12 @@ export class DeleteDepartmentMembersControllers {
         
         logger.info("a departmentMember's row has been deleted")
         return response.json(departmentMember) 
+
         } catch(err) {
+
                 logger.error(`internal server error on DeleteDepartmentMembersController:\n\n ${err}`)
+                
+                return response.sendStatus(500)
         }
         
     }

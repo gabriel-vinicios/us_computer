@@ -27,7 +27,10 @@ export class CreateDepartmentMembersController {
 
             return response.json(departmentMembers)
         } catch (err) {
+
             logger.error(`internal server error on CreateDepartmentMembersController.ts was found:\n \n ${err}`)
+            
+            return response.sendStatus(500)
         }
 
     }

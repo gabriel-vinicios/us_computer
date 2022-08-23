@@ -46,7 +46,10 @@ export class UpdateMemberController {
             logger.info(`this member was updated:\n Name:${member?.name} \n\n ID:${member.id} \n\n Description:${member.description} \n\n Role:${member.role}`)
             return response.json(member)
         } catch (err) {
+
             logger.error(`internal server error on DeleteDepartmentController.ts was found:\n\n ${err}`)
+            
+            return response.sendStatus(500)
         }
 
 

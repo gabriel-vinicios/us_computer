@@ -18,7 +18,10 @@ export class FindDepartmentController {
 
             return response.json(department)
         } catch (err) {
+
             logger.error(`internal server error on FindDepartmentController.ts was found:\n\n ${err}`)
+            
+            return response.sendStatus(500)
         }
 
 

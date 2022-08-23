@@ -22,8 +22,12 @@ export class DeleteMemberController {
             })
             logger.info(`this member was deleted: ${member.name}`)
             return response.json(member)
+
         } catch (err) {
+
             logger.error(`internal server error on DeleteMemberController.ts was found:\n\n ${err}`)
+            
+            return response.sendStatus(500)
         }
 
 

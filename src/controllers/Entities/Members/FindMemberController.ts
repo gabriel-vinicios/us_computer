@@ -21,8 +21,12 @@ export class FindMemberController {
             logger.info(`this member was searched:\n ${member?.name}`)
 
             return response.json(member)
+
         } catch (err) {
+
             logger.error(`internal server error on FindMemberController.ts was found:\n \n ${err}`)
+            
+            return response.sendStatus(500)
         }
 
     }

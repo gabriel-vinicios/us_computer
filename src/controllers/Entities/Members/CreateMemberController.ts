@@ -34,7 +34,11 @@ export class CreateMemberController {
 
             return response.json(member)
         } catch (err) {
+
             logger.error(`internal server error on CreateMemberController.ts was found:\n \n ${err}`)
+
+            return response.sendStatus(500)
+            
         }
 
     }

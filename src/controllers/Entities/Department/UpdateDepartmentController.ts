@@ -33,8 +33,12 @@ export class UpdateDepartmentController {
             
             logger.info(`this department was updated:\n\n Name: ${department.name} \n\n ID: ${department.id}`)
             return response.json(department)
+            
         } catch (err) {
+
             logger.error(`internal server error on UpdateDepartmentController.ts:\n\n ${err}`)
+
+            return response.sendStatus(500)
         }
 
 
