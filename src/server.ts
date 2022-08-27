@@ -4,7 +4,8 @@ import logger from './logger'
 import cors from 'cors'
 
 const app = express()
-const PORT = process.env.PORT_ENV
+const BASE_URL = process.env.BASE_URL
+const PORT = process.env.PORT
 
 app.use(express.json())
 app.use(router)
@@ -12,7 +13,7 @@ app.use(cors())
 
 try{
 
-app.listen(PORT, () => console.log(`Server is on PORT ${PORT}`))
+app.listen(PORT, () => console.log(`Server is on ${BASE_URL}`))
 logger.info("the server has been activated or updated")
 
 } catch(err) {
