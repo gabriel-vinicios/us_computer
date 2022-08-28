@@ -36,7 +36,7 @@ const findAllDepartment = new FindAllDepartmentsController()
 
 router.post("/departmentMember", createDepartmentMember.handle)
 router.delete("/departmentMember/:id", deleteDepartmentMember.handle)
-router.get("allDepartmentMembers", findAllDepartmentsMembers.handle)
+router.get("/allDepartmentMembers", findAllDepartmentsMembers.handle)
 
 router.post("/memberWithExistDepartment", createMemberDepartmentExist.handle)
 router.post("/member", createMember.handle)
