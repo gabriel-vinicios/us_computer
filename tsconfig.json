@@ -8,5 +8,5 @@
     "target": "ESNext",
     "module":"CommonJS"
   },
-  "include": ["src/Controllers/Entities/**/*.ts"]
+  "include": ["src/**/*.ts",]
 } 
