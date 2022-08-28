@@ -3,9 +3,9 @@ import { prismaClient } from "../../../database/prismaClient"
 
 
 export class FindAllDepartmentsController {
-    handle(request: Request, response: Response) {
+   async handle(request: Request, response: Response) {
 
-        const members = prismaClient.department.findMany()
+        const members = await prismaClient.department.findMany()
 
         return response.json(members)
 

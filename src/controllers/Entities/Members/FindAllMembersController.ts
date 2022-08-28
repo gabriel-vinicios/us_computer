@@ -3,9 +3,11 @@ import { prismaClient } from "../../../database/prismaClient";
 
 
 export class FindAllMembersController {
-    handle(request: Request, response: Response) {
+  async handle(request: Request, response: Response) {
 
-        const members = prismaClient.members.findMany()
+        const members = await prismaClient.members.findMany(
+            
+        )
 
         return response.json(members)
 
