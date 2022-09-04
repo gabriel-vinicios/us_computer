@@ -7,12 +7,12 @@ const express_1 = __importDefault(require("express"));
 const routes_1 = require("./routes");
 const logger_1 = __importDefault(require("./logger"));
 const cors_1 = __importDefault(require("cors"));
-const app = (0, express_1.default)();
+const app = express_1.default();
 const BASE_URL = process.env.BASE_URL;
 const PORT = process.env.PORT;
 app.use(express_1.default.json());
 app.use(routes_1.router);
-app.use((0, cors_1.default)());
+app.use(cors_1.default());
 try {
     app.listen(PORT, () => console.log(`Server is on ${BASE_URL}`));
     logger_1.default.info("the server has been activated or updated");

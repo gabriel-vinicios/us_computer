@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindAllMembersController = void 0;
 const prismaClient_1 = require("../../../database/prismaClient");
 class FindAllMembersController {
-    handle(request, response) {
-        const members = prismaClient_1.prismaClient.members.findMany();
+    async handle(request, response) {
+        const members = await prismaClient_1.prismaClient.members.findMany();
         return response.json(members);
     }
 }
