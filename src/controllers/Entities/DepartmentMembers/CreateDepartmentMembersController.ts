@@ -5,7 +5,7 @@ import logger from "../../../logger";
 export class CreateDepartmentMembersController {
     async handle(request: Request, response: Response) {
         const { id_members, id_departments } = request.body
-
+        response.header("Access-Control-Allow-Origin", "*");
 
         try {
             if (!id_members) {

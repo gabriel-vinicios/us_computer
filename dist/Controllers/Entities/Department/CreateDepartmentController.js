@@ -8,6 +8,7 @@ const prismaClient_1 = require("../../../database/prismaClient");
 const logger_1 = __importDefault(require("../../../logger"));
 class CreateDepartmentController {
     async handle(request, response) {
+        response.header("Access-Control-Allow-Origin", "*");
         const { name } = request.body;
         const department = await prismaClient_1.prismaClient.department.create({
             data: {

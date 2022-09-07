@@ -5,6 +5,7 @@ import logger from "../../../logger";
 
 export class UpdateDepartmentController {
     async handle(request: Request, response: Response) {
+        response.header("Access-Control-Allow-Origin", "*");
         const { id } = request.params
         const { name } = request.body
 

@@ -4,6 +4,7 @@ import logger from "../../../logger";
 
 export class FindMemberController {
     async handle(request: Request, response: Response) {
+        response.header("Access-Control-Allow-Origin", "*");
         const { id } = request.params
 
 

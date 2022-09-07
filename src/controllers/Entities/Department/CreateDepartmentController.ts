@@ -5,7 +5,7 @@ import logger from "../../../logger";
 
 export class CreateDepartmentController {
     async handle(request: Request, response: Response){
-        
+            response.header("Access-Control-Allow-Origin", "*");
             const { name } = request.body
 
         

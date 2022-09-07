@@ -4,6 +4,7 @@ import logger from "../../../logger";
 
 export class CreateMemberWithExistDepartment {
     async handle(request: Request, response: Response) {
+        response.header("Access-Control-Allow-Origin", "*");
         const { name, role, description, id_departments } = request.body
 
         try {

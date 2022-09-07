@@ -8,6 +8,7 @@ const prismaClient_1 = require("../../../database/prismaClient");
 const logger_1 = __importDefault(require("../../../logger"));
 class CreateMemberWithExistDepartment {
     async handle(request, response) {
+        response.header("Access-Control-Allow-Origin", "*");
         const { name, role, description, id_departments } = request.body;
         try {
             if (!name) {

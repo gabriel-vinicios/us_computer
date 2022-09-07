@@ -8,6 +8,7 @@ const prismaClient_1 = require("../../../database/prismaClient");
 const logger_1 = __importDefault(require("../../../logger"));
 class DeleteDepartmentMembersControllers {
     async handle(request, response) {
+        response.header("Access-Control-Allow-Origin", "*");
         const { id } = request.body;
         try {
             if (!id) {

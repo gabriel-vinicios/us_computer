@@ -5,7 +5,7 @@ import logger from "../../../logger";
 
 export class DeleteDepartmentController {
     async handle(request: Request, response: Response) {
-
+        response.header("Access-Control-Allow-Origin", "*");
         const { id } = request.body
 
         try {

@@ -9,6 +9,7 @@ const logger_1 = __importDefault(require("../../../logger"));
 class CreateDepartmentMembersController {
     async handle(request, response) {
         const { id_members, id_departments } = request.body;
+        response.header("Access-Control-Allow-Origin", "*");
         try {
             if (!id_members) {
                 logger_1.default.warn(`department_member creation was attempted but it was denied`);
